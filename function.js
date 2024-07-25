@@ -1,11 +1,14 @@
-    const upperCase= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const characterList= 'A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z';
+    var splitted= characterList.split(', ');
+    var rst= splitted.join('');
+    var upperCase= rst;
     const lowerCase= upperCase.toLocaleLowerCase();
     const symbol= `!@#$%^&*()_~<>?,./|"+:-;'={[]`;
     const number= '0123456789';
     const passwordBox= document.getElementById("password");
     const total= upperCase+ lowerCase+ symbol+ number+ passwordBox;
     const limit= 12;
-     
+    
 function createPassword(){
     var password= '';
     password+= upperCase[Math.floor(Math.random()* upperCase.length)];
